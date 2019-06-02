@@ -66,7 +66,7 @@ def test():
 def testdb():
     feedmypet = mongo.db.history
     output = []
-    for s in pigate.find():
+    for s in feedmypet.find():
         output.append({'id': s['id'], 'gate_closed': s['gate_closed']})
     return jsonify({'result': output})
 
